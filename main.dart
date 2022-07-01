@@ -10,128 +10,107 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      return MaterialApp(
-      home: Scaffold(
-      backgroundColor: Color.fromARGB(255, 247, 247, 250),
-        appBar: AppBar(toolbarHeight:10,),
-           body:Center(
-                 child:Column(
+      home: Scaffold(backgroundColor: Colors.white,
+      body: Column( crossAxisAlignment:CrossAxisAlignment.center,
+        children: [
+        Container(  margin:EdgeInsets.only(top: 30,left: 20),
+           width: 140.0,
+            height: 140.0, 
+             child: CircleAvatar(backgroundColor: Color.fromARGB(255, 173, 212, 243),radius: 80,
+               child: CircleAvatar(
+                radius: 65,backgroundColor: Colors.black ,
+                backgroundImage: NetworkImage("https://freepngimg.com/thumb/man/22654-6-man-thumb.png"),
+               )          
+                     ,),              
+              ),
+              Container(
+                width: 257,height: 33,margin: EdgeInsets.only(top: 7),
+                child: Center(child: Text("   FULL NAME",
+                style: TextStyle( fontWeight: FontWeight.w400,fontSize: 24),)),
+              ),
+                Container(
+                width:257,height: 80,margin: EdgeInsets.only(top: 3,),padding: EdgeInsets.only(left: 50),
+                child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio ",
+                style: TextStyle( fontWeight: FontWeight.w400,fontSize: 15),),
+              ),
+                Container(margin: EdgeInsets.only(left: 10),
+                width:299,height: 35, color: Color.fromARGB(255, 243, 219, 218),
+                child: Row( 
                   children: [
-                     Expanded(
-      flex: 2,
-       child: Container(
-        width: 159,height:159,
-      child:CircleAvatar(
-        backgroundColor: Color.fromARGB(255, 104, 159, 223),
-        child: CircleAvatar(
-           radius: 60,
-                   backgroundImage:NetworkImage("https://c.tenor.com/zYAKNp4qCzMAAAAC/kurdistan.gif"),
-
-        ),
-                   ),
-    ) 
-    ),
-  Expanded(
-      flex:1,
-       child: Container(
-        width: 257, height: 33,
-        alignment: Alignment.center,
-      child: Text("Full NAME",
-      style: TextStyle(
-        fontWeight:FontWeight.w400,
-        fontSize: 24,
-             ),),
-      
-    ) ,
-    ),
-      Expanded(
-      flex:1,
-       child: Container(
-        width: 257, height: 101,
-        alignment: Alignment.center,
-      child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,.",
-      style: TextStyle(
-        fontWeight:FontWeight.w400,
-        fontSize: 15,
-             ),),
-      
-    ) ,
-    ),
- Expanded(
-      flex: 3,  
-       child: Column(
-        children: [
-          Row( 
-            children: [ 
-              Container( 
-                      margin: const EdgeInsets.only(top: 10.0, right: 70,left: 10),
-                width: 30, height: 30,
-                child: CircleAvatar(backgroundImage: NetworkImage("https://www.freepnglogos.com/uploads/linkedin-logo-black-png-12.png"),),
+                    Image.network("https://cdn-icons-png.flaticon.com/128/1384/1384014.png"),
+                    Text("                       Linkdin Profile")
+                  ],
+                )
               ),
-              Text("Linkden Profile")
-            ],
-          ),
-    Row(
-            children: [
-              Container( 
-                      margin: const EdgeInsets.only(top: 10.0, right: 70,left: 10),
-                width: 30, height: 30,
-                child: CircleAvatar(backgroundImage: NetworkImage("https://png.pngtree.com/element_our/sm/20180509/sm_5af29f0c17b0f.jpg"),),
+                   Container(margin: EdgeInsets.only(left: 10, top: 5),
+                width:299,height: 35, color: Color.fromARGB(255, 155, 167, 192),
+                child: Row( 
+                  children: [
+                    Image.network("https://cdn-icons.flaticon.com/png/128/3128/premium/3128208.png?token=exp=1656675372~hmac=7246a754012b14ea79f91ff1160c61e5"),
+                    Text("                       Facebook Profile")
+                  ],
+                )
               ),
-              Text("Facebook Profile")
-            ],
-          ),      
-    Row(
-            children: [
-              Container(
-                      margin: const EdgeInsets.only(top: 10.0, right: 70,left: 10),
-                width: 30, height: 30,
-                child: CircleAvatar(backgroundImage: NetworkImage("https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-logo-abundant-instagram-logo-simple-icon-1.png"),),
+                     Container(margin: EdgeInsets.only(left: 10, top: 5),
+                width:299,height: 35, color: Color.fromARGB(255, 243, 179, 195),
+                child: Row( 
+                  children: [
+                    Image.network("https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-128.png"),
+                    Text("                       Instagram Profile")
+                  ],
+                )
               ),
-              Text("Instagram Profile")
-            ],
-          ),
-    Row(
-            children: [
-              
-              Container(
-                      margin: const EdgeInsets.only(top: 10.0, right: 70,left: 10),
-                width: 30, height: 30,
-                child: CircleAvatar(backgroundImage: NetworkImage("https://icon2.cleanpng.com/20180320/qrq/kisspng-computer-icons-web-browser-desktop-wallpaper-scala-free-high-quality-site-internet-icon-5ab11bff84d580.7659616415215564795441.jpg"),),
+                           Container(margin: EdgeInsets.only(left: 10, top: 5),
+                width:299,height: 35, color: Color.fromARGB(255, 211, 240, 210),
+                child: Row( 
+                  children: [
+                    Image.network("https://img.icons8.com/ios-filled/2x/internet.png"),
+                    Text("                       My website")
+                  ],
+                )
               ),
-              Text("my website",)
-            ],
-          ),       ],
-       
-       )
-    ),
-     Expanded(
-      flex: 1,  
-       child: Container(
-        alignment: Alignment.center,
-      child: Row(
-        children: [
-          Container(
-           margin: const EdgeInsets.only(top: 10.0, right: 50,left: 30),
-          child: CircleAvatar(backgroundImage: NetworkImage("https://png.pngtree.com/element_our/sm/20180626/sm_5b321c98efaa6.jpg"),),
-          ),
-          Container(
-           margin: const EdgeInsets.only(top: 10.0, right: 50),
-          child: CircleAvatar(backgroundImage: NetworkImage("https://cdn-icons-png.flaticon.com/128/561/561127.png"),),
-          ) ,Container(
-           margin: const EdgeInsets.only(top: 10.0, right: 50),
-          child: CircleAvatar(backgroundImage: NetworkImage("https://cdn-icons-png.flaticon.com/128/2190/2190552.png"),),
-          )
-        ],
-
-      )
-    ) 
-    ),
-
+                               Container(margin: EdgeInsets.only(top: 25),
+                width:330,height: 60, color: Colors.white,
+                child: Row( 
+                  children: [
+                  
+              Container(  margin:EdgeInsets.only(left: 10, right: 60),
+           width: 60.0,
+            height: 60.0, 
+             child: CircleAvatar(backgroundColor: Color.fromARGB(255, 217, 233, 247),
+               child: CircleAvatar(
+                radius:20,backgroundColor: Colors.transparent ,
+                backgroundImage: NetworkImage("https://cdn.icon-icons.com/icons2/373/PNG/128/Whatsapp_37229.png"),
+               )          
+                     ,),              
+              ),
+              Container(  margin:EdgeInsets.only(right: 60),
+           width: 60.0,
+            height: 60.0, 
+             child: CircleAvatar(backgroundColor: Color.fromARGB(255, 217, 233, 247),
+               child: CircleAvatar(
+                radius:20,backgroundColor: Colors.transparent ,
+                backgroundImage: NetworkImage("https://cdn.icon-icons.com/icons2/526/PNG/128/SMS_icon-icons.com_52477.png"),
+               )          
+                     ,),              
+              ),
+                     Container(  margin:EdgeInsets.only(right: 0),
+           width: 60.0,
+            height: 60.0, 
+             child: CircleAvatar(backgroundColor: Color.fromARGB(255, 217, 233, 247),
+               child: CircleAvatar(
+                radius:20, backgroundColor: Colors.transparent ,
+                backgroundImage: NetworkImage("https://cdn.icon-icons.com/icons2/259/PNG/128/ic_sms_128_28658.png"),
+               )          
+                     ,),              
+              ),
 
                   ],
-                 ),
-           ),
+                )
+              ),
+              
+              ]),
     )
      );
   }
-}
+}   
